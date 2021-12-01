@@ -11,42 +11,29 @@ class App extends React.Component {
     state = {
         user:
             {
-                avatar: "",
-                followers: "",
-                repos: "",
-                name: "VABIII",
-                login: ",",
-                followerUrl: ""
+                name: "VABIII"
             },
-        followers: []
+        followers: [],
+        input: ""
     }
 
-  componentDidMount() {
-    this.getPerson(this.state.user.name)
-    this.getFollowers(this.state.user.name)
-  }
 
-  getPerson = name => {
-      axios.get(`https://api.github.com/users/${name}`)
-          .then(res => {
-              const data = res.data;
-              console.log(res.data);
-              this.setState({
-                  ...this.state,
-                  user:{
-                      avatar: data.avatar_url,
-                      followers: data.followers,
-                      repos: data.public_repos,
-                      name: data.name,
-                      login: data.login,
-                      followerUrl: data.followers_url
-                  }
+
+      getPerson = (name) => {
+          axios.get(`https://api.github.com/users/${name}`)
+              .then(res => {
+                  console.log(res.data)
+                  this.setState({
+                      ...this.state,
+                      user: res.data
+                  })
+                  console.log(this.state)
               })
-          })
-          .catch(err => {
-              console.error(err);
-          })
-  }
+
+              .catch(err => {
+                  console.error(err);
+              })
+      }
 
     getFollowers = name => {
         axios.get(`https://api.github.com/users/${name}/followers`)
@@ -57,6 +44,13 @@ class App extends React.Component {
                 console.error(err);
             })
     }
+
+    componentDidMount() {
+        this.getPerson(this.state.user.name);
+        this.getFollowers(this.state.user.name)
+        }
+
+
 
   render() {
         console.log(this.state)
