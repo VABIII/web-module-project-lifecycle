@@ -77,23 +77,8 @@ class App extends React.Component {
             </div>
           </div>
             <br/>
-            {/*<div className="user">*/}
-            {/*<div className="user-img">*/}
-            {/*    <img src="https://avatars.githubusercontent.com/u/87542373?v=4" alt="avatar"/>*/}
-            {/*</div>*/}
-            {/*<div className="user-info">*/}
-            {/*   <h2>{this.state.user.name}</h2>*/}
-            {/*   <p>({this.state.user.login})</p>*/}
-            {/*   <h4 id="repos">Total Repos:&nbsp;{this.state.user.repos}</h4>*/}
-            {/*   <h4>Total Followers:&nbsp;{this.state.user.followers}</h4>*/}
-            {/*</div>*/}
-            {/*</div>*/}
-            {/*<div className="followers">*/}
-            {/*    <div className="followers-header">*/}
-            {/*      <h3>Followers:</h3>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <User user={this.state.user}/>
+            <FollowerList/>
         </div>
     );
   }

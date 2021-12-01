@@ -1,21 +1,23 @@
 import React from "react";
-
+import Follower from "./Follower";
 
 class FollowerList extends React.Component {
-
     render() {
-        return(
+        return (
             <div>
-                <h3>Follower:</h3>
+                <div className="followers">
+                    <div className="followers-header">
+                        <h3>Followers:</h3>
+                    </div>
+                </div>
+                <Follower follower={this.props}/>
             </div>
-        )
+        );
     }
-
 }
 
 
 export default FollowerList;
-
 
 
 
