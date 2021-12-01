@@ -58,7 +58,7 @@
 }
 
 .user-info p {
-    font-size: .9rem;
+    font-size: 1.5rem;
     margin: 0;
     /*border: solid 1px black;*/
 }
@@ -72,11 +72,12 @@
 
 .user-info h4 {
     margin: 0 ;
+    font-size: 1.2rem;
 }
 
 #repos {
     /*border: solid 1px black;*/
-    margin: 15% 0 0 ;
+    margin: 7% 0 1.5% ;
 }
 
 .followers-header {
@@ -87,13 +88,6 @@
     margin: 0 0 0 2%;
 }
 
-.search-form {
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
-    /*align-content: flex-end;*/
-    /*align-items: flex-end;*/
-    /*align-self: flex-end;*/
-}
 
 
 
