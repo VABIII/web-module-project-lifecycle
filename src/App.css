@@ -1,28 +1,99 @@
 .search-container {
     display: flex;
+    flex-direction: column;
+    /*justify-content: flex-end;*/
+}
+
+.title h1 {
+    /*padding: 5% 0 0;*/
+    font-size: 3rem;
+    /*border: 1px black solid;*/
+    margin: 0;
+}
+
+.search-container form{
+    width: 1500%;
+    padding: .5% 0 0;
+    /*justify-content: center;*/
+    /*border: 1px green solid;*/
+    /*align-self: flex-start;*/
+}
+
+.header {
+    /*display: flex;*/
+    border: red 1px solid;
+    /*justify-content: flex-start;*/
+    /*align-items: flex-end;*/
+    /*flex-direction: column;*/
+}
+
+.title {
+    /*border: solid rebeccapurple 1px;*/
 }
 
 
+.user {
+    display: flex;
+    /*border: solid rebeccapurple 1px;*/
+}
+
+.user-img {
+    /*border: solid rebeccapurple 1px;*/
+    width:20%
+}
+
+.user-img img{
+    /*border: solid blue 1px;*/
+    width: 100%;
+}
+
+.user-info {
+    margin: 0 2%;
+    /*border: solid 1px black;*/
+    display: flex;
+
+    flex-direction: column;
 
 
+}
 
+.user-info p {
+    font-size: .9rem;
+    margin: 0;
+    /*border: solid 1px black;*/
+}
 
+.user-info h2{
+    font-size: 3rem;
+    margin: 0;
+    /*border: solid 1px black;*/
+    text-decoration: underline;
+}
 
+.user-info h4 {
+    margin: 0 ;
+}
 
+#repos {
+    /*border: solid 1px black;*/
+    margin: 15% 0 0 ;
+}
 
+.followers-header {
+    font-size: 1.5rem;
+}
 
+.body {
+    margin: 0 0 0 2%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.search-form {
+    /*display: flex;*/
+    /*justify-content: flex-end;*/
+    /*align-content: flex-end;*/
+    /*align-items: flex-end;*/
+    /*align-self: flex-end;*/
+}
 
 
 
