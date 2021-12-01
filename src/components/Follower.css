@@ -1,0 +1,64 @@
+.follower {
+    width: 25%;
+    margin: 2%;
+    padding: 0;
+    /*text-align: center;*/
+    /*border: green 1px solid;*/
+    font-size: 2rem;
+
+}
+
+.follower-container {
+    display: flex;
+    /*border: blue 1px solid;*/
+}
+
+.follow {
+    /*border: red 1px solid;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    border-radius: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

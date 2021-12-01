@@ -39,6 +39,10 @@ class App extends React.Component {
         axios.get(`https://api.github.com/users/${name}/followers`)
             .then(res => {
                 console.log(res.data);
+                this.setState({
+                    ...this.state,
+                    followers: res.data
+                })
             })
             .catch(err => {
                 console.error(err);
@@ -72,7 +76,7 @@ class App extends React.Component {
           </div>
             <br/>
             <User user={this.state.user}/>
-            <FollowerList/>
+            <FollowerList followers={this.state.followers}/>
         </div>
     );
   }
