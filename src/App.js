@@ -27,7 +27,7 @@ class App extends React.Component {
                       ...this.state,
                       user: res.data
                   })
-                  console.log(this.state)
+                  // console.log(this.state)
               })
 
               .catch(err => {
@@ -38,7 +38,7 @@ class App extends React.Component {
     getFollowers = name => {
         axios.get(`https://api.github.com/users/${name}/followers`)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.setState({
                     ...this.state,
                     followers: res.data
@@ -54,10 +54,24 @@ class App extends React.Component {
         this.getFollowers(this.state.user.name)
         }
 
+    onChange = evt => {
+        this.setState({
+            ...this.state,
+            input: evt.target.value
+        })
+        // console.log(this.state.input)
+    }
 
+    onSubmit = evt => {
+        evt.preventDefault();
+        console.log(this.state.input);
+        this.getPerson(this.state.input);
+        this.getFollowers(this.state.input)
+
+    }
 
   render() {
-        console.log(this.state)
+        console.log(this.state.input)
     return(
         <div className="search-container">
           <div className="header">
@@ -65,10 +79,12 @@ class App extends React.Component {
                 <h1>GITHUB INFO</h1>
             </div>
             <div className="search-form">
-                <form>
+                <form onSubmit={this.onSubmit}>
                      <input
                         type="text"
                         name="search"
+                        value={this.state.input}
+                        onChange={this.onChange}
                      />
                     <button>Search</button>
                  </form>

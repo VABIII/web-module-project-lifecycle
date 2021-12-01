@@ -5,7 +5,7 @@ import "./FollowerList.css"
 class FollowerList extends React.Component {
 
     render() {
-        console.log(this.props.followers)
+        // console.log(this.props.followers)
         return (
             <div className="follow">
                 <div className="followers">
